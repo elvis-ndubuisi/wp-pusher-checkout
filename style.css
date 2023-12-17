@@ -1,0 +1,378 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* --clr-light: "#F5F8FA"; */
+  --clr-dark: "#1D2C3C";
+  --clr-main: "#B9F5FF";
+  --clr-white: "#ffffff";
+  --clr-blue: "#1179BF";
+  --clr-stroke: "#566473";
+  --clr-stroke-dark: "#646E7A";
+}
+
+html,
+body {
+  min-height: 100vh;
+  font-family: "Lato", sans-serif;
+  color: "#1D2C3C";
+  background-color: #f5f8fa;
+  font-size: 1rem;
+  position: relative;
+  overflow-x: hidden;
+}
+
+a,
+button,
+input,
+textarea {
+  font-family: inherit;
+  color: inherit;
+  font-size: inherit;
+  text-decoration: none;
+  background-color: transparent;
+}
+
+.nav_bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1360px;
+  margin-inline: auto;
+  padding-inline: 2px;
+  padding-top: 8px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #e0e6ea;
+}
+.nav_links {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: -0.01px;
+
+  a {
+    font-weight: 700;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+}
+
+.btn {
+  text-transform: capitalize;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: -0.01px;
+  padding: 11px;
+  min-width: 91px;
+  border-radius: 6px;
+  border: 2px solid #646e7a;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  place-content: center;
+  place-items: center;
+  height: 100%;
+  padding-block: 43px;
+  gap: 33px;
+}
+
+main > p {
+  text-align: center;
+  color: #636b6f;
+  font-size: 14px;
+
+  a {
+    color: #31708f;
+  }
+}
+.checkout {
+  width: 100%;
+  max-width: 892px;
+  display: grid;
+  grid-template-columns: 1fr 0.5fr;
+  background-color: white;
+  align-items: stretch;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.05),
+    0px 15px 35px 0px rgba(43, 64, 78, 0.1);
+
+  > form {
+    padding-block: 41px;
+    display: flex;
+    flex-direction: column;
+
+    h2 {
+      font-size: 30px;
+      font-weight: 400;
+      padding-bottom: 24px;
+      padding-inline: 40px;
+      border-bottom: solid 2px #f5f7fa;
+      line-height: normal;
+    }
+
+    > div {
+      padding-inline: 40px;
+      padding-block: 24px;
+      border-bottom: solid 2px #f5f7fa;
+    }
+  }
+
+  > aside {
+    padding: 41px;
+    display: flex;
+    flex-direction: column;
+    background: #1179bf;
+    color: white;
+    width: 312px;
+
+    h2 {
+      font-size: 20px;
+      font-weight: 700;
+      letter-spacing: -0.01px;
+    }
+
+    .price {
+      font-size: 60px;
+      font-weight: 300;
+      letter-spacing: -0.015px;
+
+      sup {
+        font-size: 24px;
+        font-weight: 700;
+      }
+      span {
+        font-size: 18px;
+        font-weight: 700;
+      }
+    }
+
+    .renew_alert {
+      font-size: 16px;
+      font-style: italic;
+      font-weight: 400;
+      line-height: 24px;
+      letter-spacing: -0.008px;
+      max-width: 170px;
+      padding-top: 3px;
+    }
+
+    .service_list {
+      display: flex;
+      flex-direction: column;
+      gap: 1em;
+      padding-block: 30px;
+
+      > div {
+        display: flex;
+        gap: 11px;
+        align-items: center;
+
+        p {
+          font-size: 16px;
+          font-weight: 400;
+          line-height: 24px;
+
+          span {
+            font-weight: 700;
+          }
+        }
+      }
+    }
+
+    .idea {
+      font-size: 16px;
+      font-weight: 400;
+      letter-spacing: -0.008px;
+      line-height: 1.5;
+
+      span {
+        font-weight: 700;
+      }
+
+      span:last-child {
+        position: relative;
+      }
+      span:last-child::before {
+        position: absolute;
+        bottom: -3px;
+        height: 3px;
+        width: 100%;
+        background-color: #b9f5ff;
+        content: "";
+      }
+    }
+
+    .c_divider {
+      margin-top: 41px;
+      height: 2px;
+      background-color: #b9f5ff;
+    }
+
+    .testimony {
+      margin-top: 41px;
+      margin-bottom: 17px;
+      font-size: 18px;
+      font-style: italic;
+      font-weight: 400;
+      line-height: 24px;
+      letter-spacing: -0.009px;
+
+      span {
+        font-size: 18px;
+        font-weight: 700;
+      }
+    }
+
+    .user {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+
+      img {
+        width: 40px;
+        height: 40px;
+        border-radius: 100%;
+      }
+
+      p {
+        font-size: 16px;
+        font-weight: 700;
+        letter-spacing: -0.008px;
+      }
+    }
+  }
+}
+
+.label_header {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+
+  p {
+    font-weight: 700;
+    font-size: 18px;
+  }
+}
+
+.input_inline {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  padding-block: 16px;
+}
+
+.input {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  flex: 1;
+
+  label {
+    font-size: 14px;
+    letter-spacing: 12;
+  }
+
+  input {
+    outline: 0;
+    border: 0;
+    border-radius: 4px;
+    background: #edeff2;
+    font-size: 14px;
+    border-radius: 5px;
+    padding: 10px 13px;
+  }
+  input:placeholder {
+    color: #646e7a;
+  }
+}
+
+.credit_input {
+  border-radius: 4px;
+  background: #edeff2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  label {
+    font-size: 14px;
+    letter-spacing: 12;
+  }
+
+  input {
+    outline: 0;
+    border: 0;
+    border-radius: 4px;
+    background: #edeff2;
+    font-size: 14px;
+    border-radius: 5px;
+    padding: 10px 13px;
+  }
+
+  input:placeholder {
+    color: #646e7a;
+  }
+}
+
+.input:nth-child(2) {
+  padding-block: 16px;
+}
+
+.credit_input input {
+  flex: 1;
+}
+
+.short_input {
+  max-width: 90px;
+}
+.submit {
+  width: 483px;
+  height: 52px;
+  border: none;
+  color: white;
+  cursor: pointer;
+  margin-top: 39px;
+  margin-bottom: 24px;
+  background: #038e7d;
+  text-align: center;
+  margin-inline: auto;
+}
+
+form footer {
+  margin-inline: auto;
+  display: flex;
+  gap: 10px;
+  align-items: start;
+
+  p {
+    max-width: 303px;
+    color: #646e7a;
+    font-size: 14px;
+    letter-spacing: -0.01px;
+
+    span {
+      color: #1d2c3c;
+      font-weight: 700;
+    }
+  }
+}
+
+.stripe_logo {
+  width: 92px;
+  margin-inline: auto;
+  object-fit: contain;
+  object-position: center;
+  margin-top: 20px;
+}
